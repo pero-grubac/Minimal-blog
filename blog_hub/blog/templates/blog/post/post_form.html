@@ -1,1 +1,29 @@
-{% extends 'blog/blog.base.html' %}
+{% extends 'blog/base.html' %}
+
+{% block body_block %}
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header text-center bg-light">
+            <h2>Create New Post</h2>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.title.label_tag }}
+                    {{ form.title|add_class:"form-control" }}
+                </div>
+                <div class="mb-3">
+                    {{ form.text.label_tag }}
+                    {{ form.text|add_class:"form-control" }}
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    var editor = new MediumEditor('.editable');
+</script>
+{% endblock %}

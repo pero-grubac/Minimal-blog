@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block body_block %}
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-body text-center">
+            <h4 class="card-title">Delete Post</h4>
+            <form method="post">
+                {% csrf_token %}
+                <p class="card-text">Are you sure you want to delete <strong>{{ object }}</strong>?</p>
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="{% url 'blog:post_detail' pk=object.pk %}" class="btn btn-secondary ms-2">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

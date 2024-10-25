@@ -3,8 +3,8 @@ from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 
-from .models import Comment,Post
-from .forms import CommentForm
+from blog.models import Comment,Post
+from blog.forms import CommentForm
 
 @login_required
 def add_comment_to_post(request,pk):

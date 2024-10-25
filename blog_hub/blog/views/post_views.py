@@ -8,11 +8,12 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 
-from .models import Post
-from .forms import PostForm
+from blog.models import Post
+from blog.forms import PostForm
 
 class PostListView(ListView):
     model = Post
+    template_name = 'blog/post/post_list.html'
     
     def get_queryset(self):
         return Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
