@@ -1,28 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block body_block %}
-<div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card shadow-sm">
-                <div class="card-header text-center bg-primary text-white">
-                    <h2>New Comment</h2>
-                </div>
-                <div class="card-body">
-                    <form method="post" class="post-form">
-                        {% csrf_token %}
-                        <div class="mb-3">
-                            <label for="comment" class="form-label">Your Comment</label>
-                            <textarea name="text" id="comment" class="form-control editable" rows="5"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Post Comment</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<h1>New Comment</h1>
+<form method="post" class="post-form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Post comment</button>
+</form>
 
 <script>
     var editor = new MediumEditor('.editable');

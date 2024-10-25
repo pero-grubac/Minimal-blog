@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy,reverse
 from django.views.generic import (
     ListView, DetailView, CreateView, 
     UpdateView, DeleteView,
@@ -20,6 +20,7 @@ class PostListView(ListView):
 
 class PostDetailView(DetailView):
     model = Post
+    template_name = 'blog/post/post_detail.html'
     
 class PostCreateView(LoginRequiredMixin,CreateView):
     login_url = '/login'
@@ -41,7 +42,7 @@ class PostUpdateView(LoginRequiredMixin,UpdateView):
 
 class PostDeleteView(LoginRequiredMixin,DeleteView):
     model = Post
-    template_name = 'blog/post/post_confirm_delete.html'
+    template_name = 'blog/post/post_delete.html'
     success_url = reverse_lazy('blog:post_list')
 
 
@@ -49,9 +50,10 @@ class DraftListView(LoginRequiredMixin,ListView):
     login_url = '/login'
     redirect_field_name = 'blog/post/post_list.html'
     model = Post
-    
+    template_name = 'blog/post/post_draft_list.html'
+
     def get_queryset(self):
-        return Post.objects.filter(published_date__isnull=True).order_by('-created_date')
+        return Post.objects.filter(published_date__isnull=True).order_by('-create_date')
 
 
 @login_required

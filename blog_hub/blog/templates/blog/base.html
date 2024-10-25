@@ -67,18 +67,24 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog:drafts' %}">
+                        <a class="nav-link" href="{% url 'blog:draft_list' %}">
                             Drafts
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'blog:logout' %}">
-                            Logout
-                        </a>
+                        <form action="{% url 'logout' %}" method="post" >
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link "
+                                >
+                                Logout
+                            </button>
+                        </form>
                     </li>
                     <li class="nav-item">
-                        <h4>"Welcome": {{ user.username }}</h4>
+                        <a class="nav-link" href="#">
+                            Welcome: {{ user.username }}
+                        </a>
                     </li>
                     {% else %}
                     <li class="nav-item ms-auto">
