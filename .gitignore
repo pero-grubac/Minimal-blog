@@ -1,0 +1,21 @@
+# Ignorisanje Python-ovih keširanih fajlova
+**/__pycache__/
+**/*.py[cod]
+
+# Ignorisanje SQLite baza podataka
+**/db.sqlite3
+
+# Ignorisanje statičkih i medijskih fajlova (koji su obično generisani ili uploadovani)
+**/static/
+**/media/
+
+# Ignorisanje log fajlova
+**/*.log
+
+# Ignorisanje virtuelnih okruženja (venv ili env)
+**/env/
+**/.venv/
+**/.env
+
+# Ignorisanje migrations keširanih fajlova
+**/migrations/__pycache__/
