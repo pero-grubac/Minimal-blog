@@ -1,10 +1,23 @@
-<h1>Minimal Blog Project</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+<h1 align="center">📝 Minimal Blog Project</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/Django-5.1.2-darkgreen?logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bootstrap-5-blueviolet?logo=bootstrap&logoColor=white" />
+</p>
 
 <p>
   A simple yet elegant blog application created using Django, Python, and Bootstrap, with additional styling and editor functionalities. This project serves as a basic platform for creating, editing, and managing blog posts, including drafts, comments, and more.
 </p>
 
----
+<hr />
 
 <h2>📝 Project Description</h2>
 
@@ -35,8 +48,11 @@
 <p>This project includes the following external resources and contributions that have greatly enhanced its functionality and design:</p>
 
 <ul>
-  <li><a href="https://github.com/yabwe/medium-editor" target="_blank">Medium Editor</a> by Yabwe - for providing an intuitive and user-friendly text editor that makes content creation seamless.</li>
-  <li><a href="https://codepen.io/thapliyalshivam/pen/dvgXVO" target="_blank">Color-Changing CSS Animation</a> by Shivam Thapliyal - for the inspiring CSS color-changing animation that adds a dynamic visual experience.</li>
+  <li><a href="https://github.com/yabwe/medium-editor" target="_blank">Medium Editor</a> by Yabwe — for providing an intuitive and user-friendly text editor that makes content creation seamless.</li>
+  <li><a href="https://codepen.io/thapliyalshivam/pen/dvgXVO" target="_blank">Color-Changing CSS Animation</a> by Shivam Thapliyal — for the inspiring CSS color-changing animation that adds a dynamic visual experience.</li>
 </ul>
 
-<p align="center">Thank you for checking out this project!</p>
+<p align="center"><strong>Thank you for checking out this project!</strong></p>
+
+</body>
+</html>
