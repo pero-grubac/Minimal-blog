@@ -1,0 +1,86 @@
+/* Minimal blog styles: fonts, the color-changing headings and the editor fields */
+
+body {
+    font-family: "Sansita", sans-serif;
+    background-color: #fafafa;
+}
+
+.rubik-wet-paint-navbar-font {
+    font-family: "Rubik Wet Paint", system-ui;
+}
+
+.bigbrand {
+    font-size: 2rem;
+}
+
+.navbar form .nav-link {
+    background: none;
+    border: none;
+}
+
+/* Color-changing text, inspired by Shivam Thapliyal's CodePen */
+.loader {
+    animation: color-change 6s infinite linear;
+}
+
+@keyframes color-change {
+    0% { color: #e63946; }
+    20% { color: #f4a261; }
+    40% { color: #2a9d8f; }
+    60% { color: #457b9d; }
+    80% { color: #9b5de5; }
+    100% { color: #e63946; }
+}
+
+.post-title {
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.postdate {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.post-content {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.text-input-class {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    font-size: 1.25rem;
+}
+
+/* Medium editor area for writing a post */
+.medium-editor-textarea,
+.medium-editor-element {
+    min-height: 250px;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    background-color: #fff;
+    outline: none;
+}
+
+.post-form label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.btn-comment {
+    margin-bottom: 1rem;
+}
+
+.comment {
+    border-left: 3px solid #0d6efd;
+    padding-left: 0.75rem;
+}
+
+.centerstage {
+    padding-top: 3rem;
+}

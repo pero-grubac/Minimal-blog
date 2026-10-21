@@ -1,0 +1,15 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["blog/migrations"]
+
+[tool.ruff.lint]
+# Pyflakes (real bugs: unused/undefined names) and the error subset of pycodestyle
+select = ["F", "E9", "E7"]
+
+[tool.coverage.run]
+source = ["blog", "blog_hub"]
+omit = ["*/migrations/*", "*/tests/*", "blog_hub/asgi.py", "blog_hub/wsgi.py"]
+
+[tool.coverage.report]
+show_missing = true

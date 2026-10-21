@@ -12,7 +12,7 @@
                     {{ post.title }}
                 </a>
             </h2>
-            <p class="card-text">{{ post.text|safe|linebreaksbr|truncatechars:200 }}</p>
+            <p class="card-text">{{ post.text|striptags|truncatechars:200 }}</p>
         </div>
     </div>
     {% empty %}

@@ -1,21 +1,49 @@
-# Ignorisanje Python-ovih keširanih fajlova
-**/__pycache__/
-**/*.py[cod]
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Ignorisanje SQLite baza podataka
-**/db.sqlite3
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
 
-# Ignorisanje statičkih i medijskih fajlova (koji su obično generisani ili uploadovani)
-**/static/
-**/media/
+# Environment variables (secrets); .env.example stays in the repo
+.env
+.env.*
+!.env.example
 
-# Ignorisanje log fajlova
-**/*.log
+# Django
+db.sqlite3
+db.sqlite3-journal
+*.log
+media/
+# Output of collectstatic (the app's own blog/static/ is source and stays tracked)
+staticfiles/
 
-# Ignorisanje virtuelnih okruženja (venv ili env)
-**/env/
-**/.venv/
-**/.env
+# Tests and coverage
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.pytest_cache/
+.ruff_cache/
 
-# Ignorisanje migrations keširanih fajlova
-**/migrations/__pycache__/
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Demo recording scratch files
+readme_assets/raw/
