@@ -14,7 +14,7 @@
 
 **A small Django blog: write posts in a rich-text editor, keep them as drafts, publish them, and moderate visitors' comments.**
 
-<img src="readme_assets/demo.gif" alt="Minimal Blog demo: a visitor reads a post and leaves a comment, the author logs in, writes and publishes a new post, and approves the comment" width="900">
+<img src="readme_assets/demo.gif" alt="Minimal Blog demo: a visitor reads a post and leaves a comment, the author logs in and approves it, then writes a new post, saves it as a draft and publishes it" width="900">
 
 </div>
 
